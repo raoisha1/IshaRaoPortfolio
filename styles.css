@@ -274,6 +274,18 @@ main {
   margin-bottom: 0.75rem;
 }
 
+#education .section-heading h2 {
+  font-size: clamp(2.2rem, 3.5vw, 3.4rem);
+  color: var(--text);
+}
+
+#education .section-heading .subheading {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--text-muted);
+}
+
 .eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.2em;
@@ -450,12 +462,86 @@ main {
   letter-spacing: 0.05em;
 }
 
+.experience-timeline {
+  border-left: none;
+  margin-left: 0;
+  padding: 2rem 0;
+  position: relative;
+}
+
+.experience-timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  top: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    var(--accent),
+    var(--accent) 10px,
+    transparent 10px,
+    transparent 20px
+  );
+}
+
+.experience-timeline .timeline-item {
+  border-left: none;
+  margin-left: 0;
+  display: block;
+  width: calc(50% - 40px);
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 25px 60px rgba(25, 15, 44, 0.08);
+  position: relative;
+}
+
+.experience-timeline .timeline-item.left {
+  margin-right: auto;
+}
+
+.experience-timeline .timeline-item.right {
+  margin-left: auto;
+}
+
+.experience-timeline .timeline-item .dot {
+  position: absolute;
+  top: 1.2rem;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  border: 2px solid #fff;
+}
+
+.experience-timeline .timeline-item.left .dot {
+  right: -9px;
+}
+
+.experience-timeline .timeline-item.right .dot {
+  left: -9px;
+}
+
+.experience-timeline .timeline-item .year {
+  color: var(--accent-3);
+}
+
 .education-card {
   padding: 2rem;
   border-radius: calc(var(--radius) * 1.1);
   border: 1px solid var(--border);
   background: rgba(255, 255, 255, 0.92);
   box-shadow: 0 25px 60px rgba(25, 15, 44, 0.08);
+}
+
+.education-card .eyebrow {
+  font-size: 1rem;
+  letter-spacing: 0.12em;
+  color: var(--text);
+  font-weight: 600;
 }
 
 .tag-grid {
@@ -471,7 +557,8 @@ main {
   border: 1px solid rgba(25, 15, 44, 0.12);
   background: rgba(124, 77, 255, 0.08);
   color: var(--text);
-  font-size: 0.9rem;
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 .skills-grid {
@@ -540,6 +627,28 @@ main {
   text-align: center;
   color: var(--text-muted);
   padding: 2rem 0 4rem;
+}
+
+@media (max-width: 900px) {
+  .experience-timeline::before {
+    left: 12px;
+    transform: none;
+  }
+
+  .experience-timeline .timeline-item,
+  .experience-timeline .timeline-item.left,
+  .experience-timeline .timeline-item.right {
+    width: 100%;
+    margin: 0 0 1.5rem;
+    padding-left: 2.5rem;
+  }
+
+  .experience-timeline .timeline-item .dot,
+  .experience-timeline .timeline-item.left .dot,
+  .experience-timeline .timeline-item.right .dot {
+    left: -2px;
+    right: auto;
+  }
 }
 
 @media (max-width: 1024px) {
