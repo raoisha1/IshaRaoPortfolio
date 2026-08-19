@@ -565,23 +565,37 @@
           <h2>Contact</h2>
         </div>
         <div class="contact-grid">
-          <form class="contact-form" id="contact-form" novalidate>
+          <form
+            class="contact-form"
+            id="contact-form"
+            action="https://formspree.io/f/mgawpqlb"
+            method="POST"
+          >
             <div class="field">
               <label for="cf-name">Your name</label>
               <input id="cf-name" name="name" type="text" autocomplete="name" required />
+              <span class="field-error" data-for="name"></span>
             </div>
             <div class="field">
               <label for="cf-email">Your email</label>
               <input id="cf-email" name="email" type="email" autocomplete="email" required />
+              <span class="field-error" data-for="email"></span>
             </div>
             <div class="field">
               <label for="cf-msg">Message</label>
               <textarea id="cf-msg" name="message" rows="5" required></textarea>
+              <span class="field-error" data-for="message"></span>
             </div>
+            <input type="hidden" name="_subject" value="Portfolio enquiry" />
+            <!-- spam trap: real people never fill this in -->
+            <p class="hp" aria-hidden="true">
+              <label>Leave this empty <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" /></label>
+            </p>
             <button class="btn primary send" type="submit">Send message</button>
+            <p class="form-status" role="status" aria-live="polite"></p>
             <p class="form-note">
-              Opens in your own mail app with the message ready to send &mdash; nothing
-              is stored or sent by this site.
+              Goes straight to my inbox. Prefer your own mail app?
+              <a href="mailto:raoisha11@gmail.com">Email me directly</a>.
             </p>
           </form>
           <aside class="contact-aside">
@@ -650,26 +664,68 @@
         });
       }
 
-      // contact form composes a mail draft in the visitor's own client
+      // contact form -> Formspree over AJAX, so the visitor never leaves the page.
+      // The form still has a real action/method, so it degrades to a normal POST
+      // if this script fails to run.
       const cf = document.getElementById('contact-form');
-      if (cf) {
-        cf.addEventListener('submit', (e) => {
-          e.preventDefault();
-          const name = cf.elements['name'].value.trim();
-          const from = cf.elements['email'].value.trim();
-          const msg = cf.elements['message'].value.trim();
-          if (!name || !from || !msg) {
-            cf.querySelector(':invalid, [required]:placeholder-shown')?.focus();
-            cf.classList.add('show-errors');
-            return;
+      if (cf && window.fetch) {
+        const btn = cf.querySelector('[type="submit"]');
+        const status = cf.querySelector('.form-status');
+        const errorFor = (n) => cf.querySelector(`.field-error[data-for="${n}"]`);
+        const clearErrors = () => {
+          cf.querySelectorAll('.field-error').forEach((el) => (el.textContent = ''));
+          cf.querySelectorAll('[aria-invalid]').forEach((el) =>
+            el.removeAttribute('aria-invalid')
+          );
+        };
+        const fail = (field, message) => {
+          const slot = field && errorFor(field);
+          if (slot) {
+            slot.textContent = message;
+            cf.elements[field]?.setAttribute('aria-invalid', 'true');
+          } else {
+            status.textContent = message;
+            status.dataset.state = 'error';
           }
-          const subject = `Portfolio enquiry from ${name}`;
-          const body = `${msg}\n\n---\n${name}\n${from}`;
-          window.location.href =
-            'mailto:raoisha11@gmail.com?subject=' +
-            encodeURIComponent(subject) +
-            '&body=' +
-            encodeURIComponent(body);
+        };
+
+        cf.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          clearErrors();
+          status.textContent = '';
+          delete status.dataset.state;
+
+          if (!cf.reportValidity()) return;
+
+          btn.disabled = true;
+          const label = btn.textContent;
+          btn.textContent = 'Sending…';
+
+          try {
+            const res = await fetch(cf.action, {
+              method: 'POST',
+              body: new FormData(cf),
+              headers: { Accept: 'application/json' },
+            });
+
+            if (res.ok) {
+              cf.reset();
+              status.textContent = 'Thanks — your message is on its way. I’ll reply soon.';
+              status.dataset.state = 'ok';
+            } else {
+              const data = await res.json().catch(() => null);
+              if (data && Array.isArray(data.errors) && data.errors.length) {
+                data.errors.forEach((err) => fail(err.field, err.message));
+              } else {
+                fail(null, 'Something went wrong sending that. Please email me directly.');
+              }
+            }
+          } catch {
+            fail(null, 'Network error — check your connection, or email me directly.');
+          } finally {
+            btn.disabled = false;
+            btn.textContent = label;
+          }
         });
       }
 

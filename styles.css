@@ -1533,12 +1533,9 @@ main {
   max-width: 46ch;
 }
 
-/* only flag empties once they've tried to send */
-.contact-form.show-errors input:invalid,
-.contact-form.show-errors textarea:invalid,
-.contact-form.show-errors input:placeholder-shown,
-.contact-form.show-errors textarea:placeholder-shown {
-  border-color: rgba(214, 35, 108, 0.6);
+.field input[aria-invalid='true'],
+.field textarea[aria-invalid='true'] {
+  border-color: rgba(214, 35, 108, 0.7);
 }
 
 .contact-aside {
@@ -1558,4 +1555,59 @@ main {
     grid-template-columns: minmax(0, 1fr);
     gap: 2.25rem;
   }
+}
+
+
+/* --------------------------------------------- form status and messages -- */
+
+.field-error {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--h1);
+  min-height: 0.75rem;
+}
+
+.field-error:empty {
+  display: none;
+}
+
+.form-status {
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding-left: 0.9rem;
+  border-left: 3px solid transparent;
+}
+
+.form-status:empty {
+  display: none;
+}
+
+.form-status[data-state='ok'] {
+  color: var(--h4);
+  border-left-color: var(--v4);
+}
+
+.form-status[data-state='error'] {
+  color: var(--h1);
+  border-left-color: var(--v1);
+}
+
+.form-note a {
+  color: var(--ink);
+  border-bottom: 1px solid var(--v2);
+}
+
+.form-note a:hover {
+  color: var(--h2);
+}
+
+/* spam trap — hidden from people, still reachable by bots */
+.hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
