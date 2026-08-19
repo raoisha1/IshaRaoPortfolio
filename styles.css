@@ -1603,11 +1603,3 @@ main {
   color: var(--h2);
 }
 
-/* spam trap — hidden from people, still reachable by bots */
-.hp {
-  position: absolute;
-  left: -9999px;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}
