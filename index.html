@@ -33,7 +33,7 @@
           <li><a href="#experience">Experience</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#skills">Skills</a></li>
-          <li><a href="mailto:raoisha11@gmail.com">Contact</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
       <div class="nameplate">
@@ -67,7 +67,7 @@
           </ul>
           <div class="hero-actions">
             <a class="btn primary" href="#work">See featured builds</a>
-            <a class="btn external" href="mailto:raoisha11@gmail.com">Email me</a>
+            <a class="btn" href="#contact">Get in touch</a>
           </div>
         </div>
         <div class="hero-panel">
@@ -560,6 +560,50 @@
         </div>
       </section>
 
+      <section class="section contact-section" id="contact">
+        <div class="section-heading">
+          <h2>Contact</h2>
+        </div>
+        <div class="contact-grid">
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="field">
+              <label for="cf-name">Your name</label>
+              <input id="cf-name" name="name" type="text" autocomplete="name" required />
+            </div>
+            <div class="field">
+              <label for="cf-email">Your email</label>
+              <input id="cf-email" name="email" type="email" autocomplete="email" required />
+            </div>
+            <div class="field">
+              <label for="cf-msg">Message</label>
+              <textarea id="cf-msg" name="message" rows="5" required></textarea>
+            </div>
+            <button class="btn primary send" type="submit">Send message</button>
+            <p class="form-note">
+              Opens in your own mail app with the message ready to send &mdash; nothing
+              is stored or sent by this site.
+            </p>
+          </form>
+          <aside class="contact-aside">
+            <div class="contact-chip">
+              <span class="chip-label">Email</span>
+              <a href="mailto:raoisha11@gmail.com">raoisha11@gmail.com</a>
+            </div>
+            <div class="contact-chip">
+              <span class="chip-label">Phone</span>
+              <a href="tel:14144184630">(414)-418-4630</a>
+            </div>
+            <div class="contact-chip">
+              <span class="chip-label">LinkedIn</span>
+              <a href="https://linkedin.com/in/isha-rao11" target="_blank" rel="noreferrer">isha-rao11</a>
+            </div>
+            <div class="contact-chip">
+              <span class="chip-label">GitHub</span>
+              <a href="https://github.com/raoisha1" target="_blank" rel="noreferrer">@raoisha1</a>
+            </div>
+          </aside>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">
@@ -606,9 +650,32 @@
         });
       }
 
+      // contact form composes a mail draft in the visitor's own client
+      const cf = document.getElementById('contact-form');
+      if (cf) {
+        cf.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const name = cf.elements['name'].value.trim();
+          const from = cf.elements['email'].value.trim();
+          const msg = cf.elements['message'].value.trim();
+          if (!name || !from || !msg) {
+            cf.querySelector(':invalid, [required]:placeholder-shown')?.focus();
+            cf.classList.add('show-errors');
+            return;
+          }
+          const subject = `Portfolio enquiry from ${name}`;
+          const body = `${msg}\n\n---\n${name}\n${from}`;
+          window.location.href =
+            'mailto:raoisha11@gmail.com?subject=' +
+            encodeURIComponent(subject) +
+            '&body=' +
+            encodeURIComponent(body);
+        });
+      }
+
       // reveal on enter
       const targets = document.querySelectorAll(
-        '.section-heading, .project-card, .timeline-item, .skill-card, .education-card'
+        '.section-heading, .project-card, .timeline-item, .skill-card, .education-card, .contact-grid'
       );
       if (!reduced) {
         targets.forEach((el, i) => {
