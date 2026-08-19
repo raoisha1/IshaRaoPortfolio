@@ -7,52 +7,67 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,400..700,0..100,0..1;1,9..144,400..700,0..100,0..1&family=Bricolage+Grotesque:opsz,wght@12..96,700;800&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div class="scroll-progress"><span></span></div>
     <header class="hero" id="home">
+      <div class="mesh" aria-hidden="true">
+        <i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i>
+        <i class="blob b4"></i><i class="blob b5"></i>
+      </div>
+      <div class="topbar">
+        <a class="lead" href="mailto:raoisha11@gmail.com">raoisha11@gmail.com</a>
+        <a href="tel:14144184630">(414) 418-4630</a>
+        <a href="https://linkedin.com/in/isha-rao11" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="https://github.com/raoisha1" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
       <nav class="nav">
         <div class="logo">IR</div>
         <ul class="nav-links">
-          <li><a href="#work">Projects</a></li>
+          <li><a href="#work">Wins</a></li>
           <li><a href="#education">Education</a></li>
           <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
           <li><a href="#skills">Skills</a></li>
-          <li><a href="#about">About</a></li>
+          <li><a href="mailto:raoisha11@gmail.com">Contact</a></li>
         </ul>
       </nav>
+      <div class="nameplate">
+        <span class="plate-tag">Software Engineer</span>
+        <h1>Isha <span>Rao</span></h1>
+        <span class="plate-tag">Dallas, TX</span>
+      </div>
       <div class="hero-content">
         <div class="hero-text">
-          <p class="eyebrow">Agentic AI · Quant · Vision</p>
-          <h1>Hi, I’m <span>Isha Rao</span>.</h1>
-          <p class="description">
-            Computer Science student graduating Dec 2026 with a focus on
-            agentic AI systems, quantitative experimentation, computer vision,
-            and financial technology that keeps data-driven teams ahead.
-          </p>
-          <div class="contact-list">
-            <div class="contact-chip">
-              <span class="chip-label">Phone</span>
-              <a href="tel:14144184630">(414)-418-4630</a>
-            </div>
-            <div class="contact-chip">
-              <span class="chip-label">Email</span>
-              <a href="mailto:raoisha11@gmail.com">raoisha11@gmail.com</a>
-            </div>
-            <div class="contact-chip">
-              <span class="chip-label">GitHub</span>
-              <a href="https://github.com/raoisha1" target="_blank" rel="noreferrer">@raoisha1</a>
-            </div>
-            <div class="contact-chip">
-              <span class="chip-label">LinkedIn</span>
-              <a href="https://linkedin.com/in/isha-rao11" target="_blank" rel="noreferrer">isha-rao11</a>
-            </div>
-          </div>
+          <ul class="hero-points">
+            <li data-h="1">
+              <strong class="metric" data-h="1">4&times; hackathon winner</strong>
+              <ul class="sub-points">
+                <li><b>1st place</b> at the JPMorganChase Global Hackathon &mdash; out of 140 professional teams</li>
+                <li><b>1st place</b> at HackAI &mdash; Pitch Competition</li>
+                <li><b>1st place</b> at WeHack &mdash; General Track</li>
+                <li><b>2nd place</b> at HackUTD &mdash; NVIDIA Track, out of 100+ projects</li>
+              </ul>
+            </li>
+            <li data-h="2">
+              <strong class="metric" data-h="4">AI Showcase Winner</strong>
+              &mdash; ASEI National Convention
+            </li>
+            <li data-h="3">
+              Agentic AI systems, the production APIs behind them, and the UI/UX
+              on top
+            </li>
+            <li data-h="4">
+              B.S. Computer Science, UT Dallas &mdash; graduating Dec 2026
+            </li>
+          </ul>
           <div class="hero-actions">
             <a class="btn primary" href="#work">See featured builds</a>
+            <a class="btn external" href="mailto:raoisha11@gmail.com">Email me</a>
           </div>
         </div>
         <div class="hero-panel">
@@ -62,33 +77,76 @@
           <div class="glow"></div>
         </div>
       </div>
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span class="marquee-set">
+            <b data-h="1">JPMorganChase Global Hackathon &mdash; 1st of 140 teams</b>
+            <b data-h="2">HackAI &mdash; 1st Place, Pitch Competition</b>
+            <b data-h="3">WeHack &mdash; 1st Place, General Track</b>
+            <b data-h="4">HackUTD &mdash; 2nd Place, NVIDIA Track</b>
+            <b data-h="5">ASEI National Convention &mdash; AI Showcase Winner</b>
+          </span>
+          <span class="marquee-set">
+            <b data-h="1">JPMorganChase Global Hackathon &mdash; 1st of 140 teams</b>
+            <b data-h="2">HackAI &mdash; 1st Place, Pitch Competition</b>
+            <b data-h="3">WeHack &mdash; 1st Place, General Track</b>
+            <b data-h="4">HackUTD &mdash; 2nd Place, NVIDIA Track</b>
+            <b data-h="5">ASEI National Convention &mdash; AI Showcase Winner</b>
+          </span>
+        </div>
+      </div>
     </header>
 
     <main>
       <section class="section" id="work">
         <div class="section-heading">
-          <h2>Featured projects</h2>
+          <h2>Award-winning builds</h2>
         </div>
         <div class="project-grid">
+          <div class="project-row single">
+            <article class="project-card featured">
+              <div class="card-top">
+                <div class="card-badges">
+                  <span class="badge accent">JPMorganChase · Global Hackathon Winner · 1st Place</span>
+                </div>
+                <span class="year">Jun 2026</span>
+              </div>
+              <h3>LEDGER</h3>
+              <p>
+                Technical-debt detector for AI-generated code that placed <strong class="metric" data-h="1">1st of 140 professional teams</strong> at
+                JPMorganChase&rsquo;s firmwide Global Hackathon (Dallas Technology Center) &mdash;
+                the <strong class="metric" data-h="2">only all-intern team</strong> to place first.
+              </p>
+              <p class="project-story">
+                Built <strong class="metric" data-h="3">20+</strong> static and LLM-based analyzers producing a composite quality score from
+                maintainability, duplication, and convention violations (React, Python), and
+                architected the backend end to end. Now being moved to production at the firm, and
+                presented to <strong class="metric" data-h="5">100+ engineers</strong> and <strong class="metric" data-h="2">14 senior leaders</strong>
+                across three firm-wide Communities of Practice.
+              </p>
+            </article>
+          </div>
+
           <div class="project-row single">
             <article class="project-card">
               <div class="card-top">
                 <div class="card-badges">
-                  <span class="badge">HackUTD · 2nd Place (NVIDIA Track)</span>
+                  <span class="badge accent">HackUTD · 2nd Place (NVIDIA Track)</span>
                   <span class="badge accent">ASEI National Convention · AI Showcase Winner</span>
                 </div>
                 <span class="year">Nov 2025</span>
               </div>
               <h3>Alchemetrics</h3>
               <p>
-                Real-time operations copilot recognized as 2nd overall in the HackUTD NVIDIA Track
-                (top 2 of 100+ projects) at North America’s largest 24-hour hackathon with 1,200+
-                hackers, and winner of the ASEI National Convention AI Showcase.
+                Real-time operations copilot that placed <strong class="metric" data-h="1">2nd in the HackUTD NVIDIA Track</strong> out of <strong class="metric" data-h="3">100+ projects</strong>
+                at one of the largest 24-hour hackathons in the US (<strong class="metric" data-h="5">1,200+ participants</strong>),
+                and was named <strong class="metric" data-h="4">AI Showcase Winner</strong> at the ASEI National Convention.
               </p>
               <p class="project-story">
-                Architected multi-agent reasoning pipelines that surface anomalies ahead of alerts,
-                layered modular ingestion plus auditable state trails for transparency, and shipped
-                a living operations dashboard with sparkline context for precise incident response.
+                Developed a multi-agent system with NVIDIA Nemotron orchestrating specialist agents
+                for event detection, ticket matching, discrepancy auditing, and forecasting
+                (FastAPI, PostgreSQL, SQLAlchemy, OR-Tools), plus a Next.js + Tailwind dashboard
+                surfacing live alerts and agent reasoning traces.
               </p>
               <div class="project-links">
                 <a
@@ -113,20 +171,17 @@
             <article class="project-card">
               <div class="card-top">
                 <div class="card-badges">
-                  <span class="badge">HackAI · 1st Place Pitch Competition</span>
+                  <span class="badge accent">HackAI · 1st Place Pitch Competition</span>
                 </div>
                 <span class="year">Mar 2026</span>
               </div>
               <h3>SkillCity</h3>
               <p>
-                Civic learning platform that won HackAI 2026’s pitch competition for weaving
-                immersive roleplay with AI mentors.
+                LLM-based agent platform for challenge-driven interactive learning that won <strong class="metric" data-h="1">HackAI 2026&rsquo;s pitch competition</strong>, presented to <strong class="metric" data-h="5">350+ attendees</strong>.
               </p>
               <p class="project-story">
-                Built a multi-agent system powered by Gemini for prompt-based reasoning, response
-                generation, and adaptive difficulty tuned to each user interaction, with a backend
-                orchestrating agent routing, context memory, and persistent state plus a React/Next.js
-                frontend surfacing live agent feedback and progress cues.
+                Designed an agent-driven architecture on the Gemini API for adaptive difficulty
+                scaling and real-time state updates, built with Next.js, TypeScript, and Supabase.
               </p>
               <div class="project-links">
                 <a
@@ -138,70 +193,22 @@
                 >
               </div>
             </article>
-
             <article class="project-card">
               <div class="card-top">
                 <div class="card-badges">
-                  <span class="badge accent">Simulation &amp; Decision Platform</span>
-                </div>
-                <span class="year">Feb 2026</span>
-              </div>
-              <h3>Atlas</h3>
-              <p>
-                Large-scale airline disruption simulator that ranks recovery strategies across
-                thousands of parallelized scenarios.
-              </p>
-              <p class="project-story">
-                Built a Python HPC-style engine modeling flights, crews, and connections, then
-                integrated Gemini to explain recovery plans and recommend GPU configurations while
-                parallel execution evaluated 1,000+ scenarios about 60% faster and weighted constraints
-                balanced delay, cost, and connection tradeoffs.
-              </p>
-              <div class="project-links">
-                <a
-                  class="pill-link"
-                  href="https://github.com/raoisha1/Atlas"
-                  target="_blank"
-                  rel="noreferrer"
-                  >GitHub</a
-                >
-              </div>
-            </article>
-          </div>
-
-          <div class="project-row middle">
-            <article class="project-card">
-              <div class="card-top">
-                <div class="card-badges">
-                  <span class="badge">J.P. Morgan Code for Good Hackathon</span>
-                </div>
-                <span class="year">Oct 2025</span>
-              </div>
-              <h3>YSSI Impact</h3>
-              <p>Volunteer impact platform built in partnership with YSSI for nonprofit scale.</p>
-              <p class="project-story">
-                Delivered synchronized member/admin workspaces, automated onboarding and compliance
-                rituals to keep data current, and launched an AI interviewer that reduces screening
-                cycles by 70%+.
-              </p>
-            </article>
-
-            <article class="project-card">
-              <div class="card-top">
-                <div class="card-badges">
-                  <span class="badge">WeHack · 1st Place (General Track)</span>
+                  <span class="badge accent">WeHack · 1st Place (General Track)</span>
                 </div>
                 <span class="year">Apr 2025</span>
               </div>
               <h3>LaneBot</h3>
               <p>
-                Computer-vision driving assistant that keeps speeds steady and lanes reliable; earned
-                1st place out of 76 projects at WeHack with 300+ hackers.
+                Computer-vision driving assistant doing real-time lane detection on live dashcam
+                video; placed <strong class="metric" data-h="1">1st of 76+ teams</strong> at WeHack.
               </p>
               <p class="project-story">
-                Integrated a polished mobile interface with edge inference for lane tracking, tuned
-                adaptive thresholding to sustain 75%+ accuracy in uncontrolled settings, and
-                translated detections into actionable driving guidance for real-world testers.
+                Built the detection pipeline with YOLO and OpenCV behind a Flask service, paired with
+                a Swift mobile interface, and tuned adaptive thresholding to hold accuracy in
+                uncontrolled real-world settings.
               </p>
               <div class="project-links">
                 <a
@@ -219,49 +226,6 @@
                   >Demo</a
                 >
               </div>
-            </article>
-          </div>
-
-          <div class="project-row bottom">
-            <article class="project-card">
-              <div class="card-top">
-                <div class="card-badges">
-                  <span class="badge">Association for Computing Machinery</span>
-                </div>
-                <span class="year">Jan 2024 – May 2024</span>
-              </div>
-              <h3>PickUP</h3>
-              <p>Campus pickup sports coordinator built for reliable team formation and logistics.</p>
-              <p class="project-story">
-                Shipped a realtime-synced mobile experience to prevent missed lobbies, layered
-                interactive mapping for precise meetups, and refined routing flows that keep crews
-                organized end-to-end.
-              </p>
-              <div class="project-links">
-                <a
-                  class="pill-link"
-                  href="https://github.com/acm-projects/PickUP"
-                  target="_blank"
-                  rel="noreferrer"
-                  >GitHub</a
-                >
-              </div>
-            </article>
-
-            <article class="project-card">
-              <div class="card-top">
-                <div class="card-badges">
-                  <span class="badge">Artificial Intelligence Society</span>
-                </div>
-                <span class="year">Sep 2023 – Dec 2023</span>
-              </div>
-              <h3>ReviewEd</h3>
-              <p>Intelligent study companion predicting tags, tone, and helpfulness of reviews.</p>
-              <p class="project-story">
-                Trained ensemble models on historic data for high-fidelity predictions, parallelized
-                pipelines to reduce training and load times, and paired the intelligence with a
-                student-friendly web interface for rapid experimentation.
-              </p>
             </article>
           </div>
         </div>
@@ -286,7 +250,11 @@
             <span class="tag">Systems Programming in UNIX</span>
             <span class="tag">Digital Logic</span>
             <span class="tag">Discrete Mathematics</span>
-            <span class="tag">Operating Systems</span>
+            <span class="tag">Artificial Intelligence</span>
+          </div>
+          <p class="eyebrow cert-label">Certification</p>
+          <div class="tag-grid">
+            <span class="tag">AWS Certified Machine Learning Engineer &ndash; Associate (MLA-C01) &middot; in progress</span>
           </div>
         </div>
       </section>
@@ -299,19 +267,43 @@
           <div class="timeline-item left">
             <div class="dot"></div>
             <div>
-              <p class="year">Summer 2026 · Houston, TX</p>
-              <h3>JPMorgan Chase &amp; Co. · Software Engineer Intern (Incoming)</h3>
+              <p class="year">Jun 2026 – Aug 2026 · Houston, TX</p>
+              <h3>JPMorganChase · Software Engineer Intern</h3>
+              <p class="role-team">Risk Technology &middot; Principal Risk</p>
+              <ul class="timeline-points">
+                <li>
+                  Built the end-to-end API ingesting upstream position data at <strong class="metric" data-h="3">10,000+</strong> positions per
+                  load into the firm&rsquo;s Principal Risk platform, designing <strong class="metric" data-h="2">3 new tables</strong> and the
+                  full Python/SQL load path; shipped to production and in active use.
+                </li>
+                <li>
+                  Replaced the legacy multi-step ingestion process with a direct API call, cutting
+                  load time by <strong class="metric" data-h="1">98%</strong> (10 minutes to under 10 seconds).
+                </li>
+                <li>
+                  Wrote validation tests and SQL data-quality checks reconciling loaded records
+                  against source position data.
+                </li>
+                <li>
+                  Authored <strong class="metric" data-h="4">6 Claude skills</strong> adopted into the Principal Risk team repository and used
+                  by full-time engineers, automating legacy-to-target migration, code-convention
+                  enforcement, and backend function scaffolding.
+                </li>
+              </ul>
             </div>
           </div>
 
           <div class="timeline-item right">
             <div class="dot"></div>
             <div>
-              <p class="year">Jan 2026 – Present · Richardson, TX</p>
+              <p class="year">Jan 2026 – May 2026 · Richardson, TX</p>
               <h3>Smart Data Solutions (Capstone) · AI Research Engineer</h3>
               <ul class="timeline-points">
+                <li>
+                  Benchmarked agentic AI project-management platforms on a <strong class="metric" data-h="5">207-point rubric</strong> under
+                  HIPAA/HITRUST constraints; recommendation <strong class="metric" data-h="4">adopted firm-wide</strong>.
+                </li>
                 <li>Evaluated LLM approaches to extract and prioritize tasks from client emails across 40–50 concurrent projects.</li>
-                <li>Built capability matrices and ran use-case tests comparing AI and human decision making to customize deployments.</li>
               </ul>
             </div>
           </div>
@@ -319,20 +311,16 @@
           <div class="timeline-item left">
             <div class="dot"></div>
             <div>
-              <p class="year">Jan 2025 – Present · Richardson, TX</p>
+              <p class="year">Jan 2025 – Dec 2025 · Richardson, TX</p>
               <h3>UTD Consult Your Community · Technical Analyst</h3>
               <ul class="timeline-points">
                 <li>
-                  Developed City Sync, an automation platform using Python, Vue.js, and AWS Lambda,
-                  boosting manual review efficiency by 40%.
+                  Built the CitySync dashboard (Python, Vue.js, AWS Lambda) for client Food Magnet,
+                  improving client workflow efficiency by <strong class="metric" data-h="4">40%</strong>.
                 </li>
                 <li>
-                  Built Spring Boot microservices for data validation and API orchestration across
-                  distributed systems.
-                </li>
-                <li>
-                  Implemented CI/CD pipelines with automated testing to secure cloud-native
-                  reliability and continuous delivery.
+                  Built Spring Boot microservices for data validation and API orchestration, with
+                  CI/CD and automated tests behind them.
                 </li>
               </ul>
             </div>
@@ -345,17 +333,14 @@
               <h3>BioBalance (Theta Tau) · Project Lead & Software Engineer</h3>
               <ul class="timeline-points">
                 <li>
-                  Led a 14-member squad to ship a real-time vitals monitoring app with React Native,
-                  Firebase, and Node.js.
+                  Led a 14-person team building a real-time vitals monitoring app (React Native,
+                  Firebase, Node.js).
                 </li>
                 <li>
-                  Designed low-latency sync and caching strategies so IoT sensor data stayed
-                  reliable.
+                  Designed the sync and caching layer so IoT sensor readings stayed accurate over
+                  intermittent connections.
                 </li>
-                <li>
-                  Coordinated Agile delivery using Jira for sprint planning, task tracking, and
-                  cross-team alignment.
-                </li>
+                <li>Ran sprint planning and task tracking in Jira across the team.</li>
               </ul>
             </div>
           </div>
@@ -366,17 +351,8 @@
               <p class="year">Jun 2023 – Aug 2023 · Frisco, TX · Part-Time</p>
               <h3>Sci-Tech Discovery Center · Teaching Assistant</h3>
               <ul class="timeline-points">
-                <li>
-                  Assisted coding workshops using Java and Arduino to teach foundational programming
-                  concepts.
-                </li>
-                <li>
-                  Developed and led STEM activities that kept young learners engaged and inspired.
-                </li>
-                <li>
-                  Fostered an interactive classroom atmosphere that encouraged curiosity and
-                  experimentation.
-                </li>
+                <li>Assisted coding workshops teaching Java and Arduino basics.</li>
+                <li>Designed and ran STEM activities for groups of young students.</li>
               </ul>
             </div>
           </div>
@@ -387,17 +363,8 @@
               <p class="year">May 2023 – Aug 2023 · Frisco, TX · Part-Time</p>
               <h3>Flix Brewhouse · Server</h3>
               <ul class="timeline-points">
-                <li>
-                  Optimized and automated technology touchpoints to streamline payments and team
-                  communication.
-                </li>
-                <li>
-                  Managed service during high-volume rushes by refining workflows and handoffs.
-                </li>
-                <li>
-                  Delivered attentive hospitality with a focus on dietary needs and personalized
-                  service.
-                </li>
+                <li>Served high-volume dinner and film shifts, handling payments and order flow.</li>
+                <li>Kept tickets moving during rushes by tightening handoffs between kitchen and floor.</li>
               </ul>
             </div>
           </div>
@@ -409,27 +376,131 @@
               <h3>Code Ninjas · Coding Instructor</h3>
               <ul class="timeline-points">
                 <li>
-                  Taught advanced programming and machine learning concepts using Java, C++, and
-                  real-world projects.
+                  Taught Java, C++, and intro machine learning through project-based lessons.
                 </li>
-                <li>
-                  Built and refined curriculum materials plus interactive workshops for students.
-                </li>
-                <li>
-                  Mentored budding engineers on problem-solving, debugging, and creative coding
-                  habits.
-                </li>
+                <li>Wrote curriculum materials and ran workshops for students.</li>
               </ul>
             </div>
           </div>
         </div>
       </section>
 
+      <section class="section" id="projects">
+        <div class="section-heading">
+          <h2>Other projects</h2>
+        </div>
+        <div class="project-grid">
+          <div class="project-row middle">
+            <article class="project-card">
+              <div class="card-top">
+                <div class="card-badges">
+                  <span class="badge">Simulation &amp; Decision Platform</span>
+                </div>
+                <span class="year">Jan 2026</span>
+              </div>
+              <h3>Atlas</h3>
+              <p>
+                Airline disruption simulation and decision platform that models airline state under
+                weather disruption and ranks recovery strategies.
+              </p>
+              <p class="project-story">
+                Python simulation engine modeling flights, crew, and connections, evaluating
+                <strong class="metric" data-h="3">hundreds</strong> of recovery scenarios across
+                parallel workers. Plans ranked by a five-factor weighted objective with
+                capacity-aware multi-hop rerouting; Gemini and OpenAI translate user intent into
+                compute plans over a deterministic core. React/Next.js + Tailwind UI.
+              </p>
+              <div class="project-links">
+                <a
+                  class="pill-link"
+                  href="https://github.com/raoisha1/Atlas"
+                  target="_blank"
+                  rel="noreferrer"
+                  >GitHub</a
+                >
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="card-top">
+                <div class="card-badges">
+                  <span class="badge">J.P. Morgan Code for Good Hackathon</span>
+                </div>
+                <span class="year">Oct 2025</span>
+              </div>
+              <h3>YSSI Impact</h3>
+              <p>Volunteer management platform built with YSSI at J.P. Morgan&rsquo;s Code for Good.</p>
+              <p class="project-story">
+                Member and admin workspaces that stay in sync, automated volunteer onboarding, and an
+                AI screening interview that cut manual review time by <strong class="metric" data-h="4">70%</strong>.
+              </p>
+            </article>
+          </div>
+
+          <div class="project-row bottom">
+            <article class="project-card">
+              <div class="card-top">
+                <div class="card-badges">
+                  <span class="badge">Association for Computing Machinery</span>
+                </div>
+                <span class="year">Jan 2024 – May 2024</span>
+              </div>
+              <h3>PickUP</h3>
+              <p>Campus pickup sports app for organizing games and finding players.</p>
+              <p class="project-story">
+                Real-time lobby sync so games don&rsquo;t fall apart last minute, map-based meetup
+                points, and routing to get everyone to the same field.
+              </p>
+              <div class="project-links">
+                <a
+                  class="pill-link"
+                  href="https://github.com/acm-projects/PickUP"
+                  target="_blank"
+                  rel="noreferrer"
+                  >GitHub</a
+                >
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="card-top">
+                <div class="card-badges">
+                  <span class="badge">Artificial Intelligence Society</span>
+                </div>
+                <span class="year">Sep 2023 – Dec 2023</span>
+              </div>
+              <h3>ReviewEd</h3>
+              <p>Study tool that predicts the tags, tone, and helpfulness of course reviews.</p>
+              <p class="project-story">
+                Trained ensemble models on historical review data and parallelized the training
+                pipeline to cut run times, behind a simple web interface for testing predictions.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section class="section" id="skills">
         <div class="section-heading">
-          <p class="eyebrow">Technical Skills</p>
+          <h2>Technical Skills</h2>
         </div>
         <div class="skills-grid">
+          <article class="skill-card">
+            <h3>AI &amp; Agents</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Claude Code</span>
+              <span class="skill-tag">Claude Cowork</span>
+              <span class="skill-tag">Agentic CLI</span>
+              <span class="skill-tag">MCP Orchestration</span>
+              <span class="skill-tag">Multi-Agent Systems</span>
+              <span class="skill-tag">Prompt Engineering</span>
+              <span class="skill-tag">Claude API</span>
+              <span class="skill-tag">Gemini</span>
+              <span class="skill-tag">GPT-4</span>
+              <span class="skill-tag">NVIDIA Nemotron</span>
+              <span class="skill-tag">GitHub Copilot</span>
+              <span class="skill-tag">Computer Vision</span>
+              <span class="skill-tag">UI/UX</span>
+            </div>
+          </article>
           <article class="skill-card">
             <h3>Languages</h3>
             <div class="skill-tags">
@@ -438,6 +509,7 @@
               <span class="skill-tag">C++</span>
               <span class="skill-tag">C</span>
               <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">TypeScript</span>
               <span class="skill-tag">Dart</span>
               <span class="skill-tag">SQL</span>
               <span class="skill-tag">C#</span>
@@ -446,7 +518,7 @@
             </div>
           </article>
           <article class="skill-card">
-            <h3>Frameworks & Tools</h3>
+            <h3>Frameworks, Data &amp; Tools</h3>
             <div class="skill-tags">
               <span class="skill-tag">React</span>
               <span class="skill-tag">Next.js</span>
@@ -463,8 +535,10 @@
               <span class="skill-tag">SQLite</span>
               <span class="skill-tag">SQLAlchemy</span>
               <span class="skill-tag">Firebase</span>
+              <span class="skill-tag">OR-Tools</span>
               <span class="skill-tag">Docker</span>
               <span class="skill-tag">Git</span>
+              <span class="skill-tag">DBeaver</span>
               <span class="skill-tag">Jira</span>
               <span class="skill-tag">Figma</span>
             </div>
@@ -486,19 +560,6 @@
         </div>
       </section>
 
-      <section class="section about-section" id="about">
-        <div class="about-content">
-          <p class="eyebrow">About</p>
-          <h2>Planner and implementer of full-stack, AI-driven solutions.</h2>
-          <p>
-            I enjoy mapping out pragmatic delivery plans, then diving into execution to build
-            end-to-end systems—from agentic AI workflows and resilient APIs to polished interfaces.
-            My focus is keeping teams aligned on customer impact while moving quickly and
-            professionally.
-          </p>
-        </div>
-      </section>
-
     </main>
 
     <footer class="footer">
@@ -506,8 +567,67 @@
     </footer>
 
     <script>
-      const yearSpan = document.getElementById('year');
-      yearSpan.textContent = new Date().getFullYear();
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // scroll progress
+      const bar = document.querySelector('.scroll-progress span');
+      const onScroll = () => {
+        const max = document.documentElement.scrollHeight - window.innerHeight;
+        bar.style.width = (max > 0 ? (window.scrollY / max) * 100 : 0) + '%';
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+
+      const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      // cursor spotlight on cards
+      if (!reduced && window.matchMedia('(hover: hover)').matches) {
+        document.querySelectorAll('.project-card, .skill-card').forEach((card) => {
+          card.addEventListener('pointermove', (e) => {
+            const r = card.getBoundingClientRect();
+            card.style.setProperty('--mx', ((e.clientX - r.left) / r.width) * 100 + '%');
+            card.style.setProperty('--my', ((e.clientY - r.top) / r.height) * 100 + '%');
+            card.style.setProperty('--lit', '1');
+          });
+          card.addEventListener('pointerleave', () =>
+            card.style.setProperty('--lit', '0')
+          );
+        });
+
+        // magnetic buttons
+        document.querySelectorAll('.btn').forEach((btn) => {
+          btn.addEventListener('pointermove', (e) => {
+            const r = btn.getBoundingClientRect();
+            const dx = (e.clientX - (r.left + r.width / 2)) * 0.28;
+            const dy = (e.clientY - (r.top + r.height / 2)) * 0.35;
+            btn.style.transform = `translate(${dx}px, ${dy}px)`;
+          });
+          btn.addEventListener('pointerleave', () => (btn.style.transform = ''));
+        });
+      }
+
+      // reveal on enter
+      const targets = document.querySelectorAll(
+        '.section-heading, .project-card, .timeline-item, .skill-card, .education-card'
+      );
+      if (!reduced) {
+        targets.forEach((el, i) => {
+          el.classList.add('reveal');
+          el.style.transitionDelay = Math.min(i % 4, 3) * 70 + 'ms';
+        });
+        const io = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((e) => {
+              if (e.isIntersecting) {
+                e.target.classList.add('is-visible');
+                io.unobserve(e.target);
+              }
+            });
+          },
+          { rootMargin: '0px 0px -8% 0px', threshold: 0.06 }
+        );
+        targets.forEach((el) => io.observe(el));
+      }
     </script>
   </body>
 </html>
