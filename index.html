@@ -390,6 +390,31 @@
           <h2>Other projects</h2>
         </div>
         <div class="project-grid">
+          <div class="project-row single">
+            <article class="project-card">
+              <div class="card-top">
+                <div class="card-badges">
+                  <span class="badge">HackMIT 2026 · Education Track</span>
+                </div>
+                <span class="year">Sep 2026</span>
+              </div>
+              <h3>LENS</h3>
+              <p>
+                AI tutor that never gives you the answer: it watches the attempt (your screen or
+                your physical workspace) and finds the exact point where your reasoning went wrong.
+              </p>
+              <p class="project-story">
+                Live camera frames go through GPT-4o vision with an enforced JSON schema, Claude
+                Computer Use points at the exact on-screen element under discussion, and Gemini
+                reasons over a real event log. Hints escalate on a
+                <strong class="metric" data-h="5">five-rung ladder</strong> (point, ask, nudge,
+                experiment, explain) that is enforced and redacted server-side, so the answer
+                can&rsquo;t be inspected out of the page. Next.js, MongoDB Atlas Vector Search,
+                Elastic hybrid retrieval, Clerk, and ElevenLabs voice.
+              </p>
+            </article>
+          </div>
+
           <div class="project-row middle">
             <article class="project-card">
               <div class="card-top">
@@ -748,5 +773,6 @@
         targets.forEach((el) => io.observe(el));
       }
     </script>
+    <script data-goatcounter="https://raoish.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
   </body>
 </html>
